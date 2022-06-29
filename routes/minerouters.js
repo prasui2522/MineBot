@@ -23,7 +23,7 @@ router.post('/insert', (req, res) => {
   const firestore = new getFirestore();
   const id = req.body.name;
 
-  const db = doc(firestore, 'MineBotDB/Users' + Date.now() + id);
+  const db = doc(firestore, 'MineBotDB/Users' + Date.now() + id,'Config');
 
   function writedoc() {
     const docData = {      
