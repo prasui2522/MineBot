@@ -19,13 +19,13 @@ class addUsers {
 
     constructor(username,password,diskplayname,email,phonenumber,location,emailVerified,disabled) 
     {      
-        this.username,
-        this.password,
-        this.diskplayname,
-        this.email,
-        this.phonenumber,
-        this.location,
-        this.emailVerified,
-        this.disabled
+        this.username;
+        this.password;
+        this.diskplayname;
+        this.email;
+        this.phonenumber;
+        this.location;
+        this.emailVerified;
+        this.disabled;
     }
 };
