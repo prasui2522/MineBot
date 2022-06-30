@@ -43,6 +43,7 @@ router.post('/insert', (req, res) => {
       exchang:'',
       analysys:'',
     };
+    // setDoc = firestore.collection(db).doc('config').set(docData)
     setDoc(db, docData, { merge: true })
       .then(() => {
         console.log('This value has been written to the database');
