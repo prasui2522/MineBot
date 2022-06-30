@@ -24,18 +24,24 @@ router.post('/insert', (req, res) => {
   const id = req.body.username;
 
   const db = doc(firestore, 'MineBotDB/Users' + Date.now() + id);
+  // const dbaccount = doc(firestore.collection('MineBotDB').doc('Users' + Date.now() + id).collection('Config'));
 
   function writedoc() {
     const docData = {      
       // uid: req.body.name,
       username: req.body.username,
       password: req.body.password,
-      diskplayname:req.body.diskplayname,
+      displayname:req.body.displayname,
       email: req.body.email,
       phonenumber: req.body.phonenumber,
       location: req.body.location,
       // emailVerified:false,
       // disabled: false,
+    };
+    const docConfig={
+      coinsymbol:'',
+      exchang:'',
+      analysys:'',
     };
     setDoc(db, docData, { merge: true })
       .then(() => {
