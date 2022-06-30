@@ -21,7 +21,7 @@ class addUsers{
         this.diskplayname;
         this.email;
         this.location;
-        this.emailVerified=false;
-        this.disabled=false;
+        this.emailVerified="false";
+        this.disabled="false";
     }
 };
