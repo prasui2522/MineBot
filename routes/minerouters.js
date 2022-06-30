@@ -1,6 +1,6 @@
 const express = require('express');
 const { registerVersion } = require('firebase/app');
-const { getFirestore, doc, setDoc, collection, addDoc } = require('firebase/firestore');
+const { getFirestore, doc, setDoc, collection, addDoc} = require('firebase/firestore');
 const router = express.Router();
 const firestore = require('../config/firebase');
 
