@@ -11,9 +11,17 @@ class addUsers{
     //     this.email=email;
     //     this.status=status;
     // }
-    constructor(name,surename)
+    // constructor(name,surename)
+    constructor(username,password,diskplayname,email,location,emailVerified,disabled)
     {
-        this.name;
-        this.surename;
+        // this.name;
+        // this.surename;
+        this.username;
+        this.password;
+        this.diskplayname;
+        this.email;
+        this.location;
+        this.emailVerified=false;
+        this.disabled=false;
     }
 };

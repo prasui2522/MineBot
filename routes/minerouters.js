@@ -21,7 +21,7 @@ router.get('/config', (req, res) => {
 router.post('/insert', (req, res) => {
 
   const firestore = new getFirestore();
-  const id = req.body.name;
+  const id = req.body.username;
 
   const db = doc(firestore, 'MineBotDB/Users' + Date.now() + id);
 
@@ -34,8 +34,8 @@ router.post('/insert', (req, res) => {
       email: req.body.email,
       phonenumber: req.body.phonenumber,
       location: req.body.location,
-      emailVerified:false,
-      disabled: false,
+      // emailVerified:false,
+      // disabled: false,
     };
     setDoc(db, docData, { merge: true })
       .then(() => {
